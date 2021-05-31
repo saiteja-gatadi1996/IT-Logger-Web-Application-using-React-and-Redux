@@ -6,7 +6,11 @@ import Search from "./Search";
 import Logs from "./Logs";
 import AddBtn from "./AddBtn";
 import AddLogModal from "./AddLogModal";
-
+import EditLogModal from "./EditLogModal";
+import AddTechModal from "./AddTechModal";
+import TechListModal from "./TechListModal";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   useEffect(() => {
@@ -15,14 +19,19 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Search />
-      <div className="container">
-        <AddBtn/>
-        <AddLogModal/>
-        <Logs />
-      </div>
-    </div>
+    <Provider store={store}>
+      <>
+        <Search />
+        <div className="container">
+          <AddBtn />
+          <AddLogModal />
+          <EditLogModal />
+          <AddTechModal />
+          <TechListModal />
+          <Logs />
+        </div>
+      </>
+    </Provider>
   );
 }
 

@@ -3,7 +3,7 @@ import React from "react";
 const AddBtn = () => {
   return (
     <div className="fixed-action-btn">
-        {/* return below id in add-log-modal */}
+      {/* return below id in add-log-modal */}
       <a
         href="#add-log-modal"
         className="btn-floating btn-large blue darken-2 modal-trigger"
@@ -20,11 +20,11 @@ const AddBtn = () => {
           </a>
         </li>
         <li>
-          <a href="#tech-modal" className="btn-floating red modal-trigger">
+          <a href="#add-tech-modal" className="btn-floating red modal-trigger">
             <i className="material-icons">person_add</i>
           </a>
         </li>
-      </ul> 
+      </ul>
     </div>
   );
 };
